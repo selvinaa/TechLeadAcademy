@@ -1,0 +1,12 @@
+<suite name="TLA 1">
+    <test name="TLA 1">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="/tests"/>
+        </packages>
+    </test>
+</suite>
