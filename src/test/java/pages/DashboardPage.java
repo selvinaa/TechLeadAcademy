@@ -9,19 +9,25 @@ import org.testng.annotations.Test;
 import utils.SeleniumUtils;
 
 public class DashboardPage  extends TestBase {
-
     public DashboardPage (){
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(linkText = "Dashboard")
+    public WebElement dashBoard_title;
+
     @FindBy(id = "global_nav_courses_link")
     public WebElement courses_Btn;
 
+    @FindBy(xpath = "//a[@class='czbXA_bGBk eHiXd_bGBk eHiXd_brAJ eHiXd_ycrn eHiXd_bNlk eHiXd_cuTS']")
+    public WebElement javaIcon;
+
     public void getCoursesInTo(){
         SeleniumUtils.click(courses_Btn);
-        Assert.assertEquals(driver.getTitle(), "dash");
-
+        SeleniumUtils.getText(dashBoard_title);
+        SeleniumUtils.click(javaIcon);
     }
+
 
 
 }

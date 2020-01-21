@@ -32,6 +32,8 @@ public class HomePage extends TestBase {
         SeleniumUtils.click(staySignInBox);
         SeleniumUtils.click(logIn_Button);
 
+
+
     }
 
 
