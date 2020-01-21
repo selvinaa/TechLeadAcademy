@@ -22,6 +22,7 @@ public class DashboardPage  extends TestBase {
     @FindBy(xpath = "//a[@class='czbXA_bGBk eHiXd_bGBk eHiXd_brAJ eHiXd_ycrn eHiXd_bNlk eHiXd_cuTS']")
     public WebElement javaIcon;
 
+
     public void getCoursesInTo(){
         SeleniumUtils.click(courses_Btn);
         SeleniumUtils.getText(dashBoard_title);

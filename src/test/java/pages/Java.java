@@ -14,7 +14,11 @@ public class Java extends TestBase {
    @FindBy(xpath = "//a[@class='ig-title title item_link']")
     public WebElement connecToMettingButton;
 
+    @FindBy(xpath = "(//a[@class='ig-title title item_link'])[2]")
+    public WebElement introToProgramming_Btn;
+
     public void connectToZoomMetting(){
         SeleniumUtils.click(connecToMettingButton);
+        SeleniumUtils.click(introToProgramming_Btn);
     }
 }

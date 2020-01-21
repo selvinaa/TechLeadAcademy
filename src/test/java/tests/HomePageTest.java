@@ -24,18 +24,18 @@ public class HomePageTest extends TestBase {
        // driver.quit();
     }
 
-    @Test
+    @Test(groups = {"Smoke Test"})
     public void verifySignInButton(){
         SeleniumUtils.waitForVisivilityOfElement(homePage.login_Field);
         Assert.assertEquals(driver.getTitle(), "Log In to Canvas");
+        SeleniumUtils.click(homePage.logIn_Button);
     }
 
     @Test
     public void sighInWithEmail(){
         SeleniumUtils.waitForVisivilityOfElement(homePage.staySignInBox);
-        //SeleniumUtils.waitForVisivilityOfElement(homePage.logIn_Button);
        homePage.enterEmailToSignIn("selvinasencio@gmail.com", "Selvin$$");
-       // Assert.assertEquals(dashboardPage.dashBoard_title.getText(),"Dashboard");
+
 
     }
 

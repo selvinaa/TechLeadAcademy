@@ -1,12 +1,21 @@
-<suite name="TLA 1">
-    <test name="TLA 1">
-        <groups>
-            <run>
-                <include name="smoke"/>
-            </run>
-        </groups>
-        <packages>
-            <package name="/tests"/>
-        </packages>
-    </test>
-</suite>
+<suite name="Test TLA">
+<test name="Test 1" enabled="true">
+    <classes>
+        <class name="tests.HomePageTest">//here we can add any class for a test
+            <methods>
+                <include name="Smoke Test"/>
+            </methods>
+        </class>
+        <class name="tests.DashboardPageTest" enabled="false"/>// it wont run with enable, we have to disable
+        <class name="tests.JavaTest" enabled="false"/>// CALLING BY CLASS ONLY
+        <class name="tests.HomePageTest" enabled="false"/>// CALLING BY CLASS ONLY
+
+    </classes>
+</test>
+<test name="Smoke Test" enabled="false">// enable is like ignoring or desability, so i wont run
+<packages>
+    <!--package name="io.techleadacademy.testNG_Jan11"/-->// CALLING BY PACKAGE SO INCLUDES EVERYTHING
+    <package name="base"/>
+</packages>
+</test>
+        </suite>
